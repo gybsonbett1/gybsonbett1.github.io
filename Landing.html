@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitPulse - Offline BMI, Period & Sync Workout Tracker</title>
+    <style>
+        :root {
+            --bg-dark: #0E1013;
+            --bg-card: #1A1D24;
+            --primary: #FF2B2B;
+            --primary-hover: #E02424;
+            --text-light: #F3F4F6;
+            --text-muted: #9CA3AF;
+            --border: #2D3139;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            line-height: 1.6;
+            padding: 0;
+        }
+
+        /* Header / Navbar */
+        header {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-icon {
+            width: 42px;
+            height: 42px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(255, 43, 43, 0.4);
+        }
+
+        .logo-text {
+            font-size: 22px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+
+        .logo-text span {
+            color: var(--primary);
+        }
+
+        .cta-btn {
+            background-color: var(--primary);
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 24px;
+            font-weight: 700;
+            font-size: 14px;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 12px rgba(255, 43, 43, 0.3);
+        }
+
+        .cta-btn:hover {
+            background-color: var(--primary-hover);
+            transform: translateY(-1px);
+        }
+
+        /* Hero Section */
+        .hero {
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .badge {
+            display: inline-block;
+            background-color: rgba(255, 43, 43, 0.15);
+            color: var(--primary);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 24px;
+            letter-spacing: 0.5px;
+            border: 1px solid rgba(255, 43, 43, 0.3);
+        }
+
+        h1 {
+            font-size: 48px;
+            font-weight: 900;
+            line-height: 1.1;
+            letter-spacing: -1px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: var(--text-muted);
+            max-width: 700px;
+            margin: 0 auto 32px auto;
+        }
+
+        /* Features Grid */
+        .features {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+        }
+
+        .feature-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 32px;
+            transition: all 0.3s ease;
+            text-align: left;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(255, 43, 43, 0.4);
+        }
+
+        .feature-icon {
+            font-size: 28px;
+            margin-bottom: 16px;
+        }
+
+        .feature-card h3 {
+            font-size: 20px;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+
+        .feature-card p {
+            color: var(--text-muted);
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        /* Privacy Banner Section */
+        .privacy-banner {
+            background-color: var(--bg-card);
+            max-width: 1100px;
+            margin: 80px auto;
+            padding: 40px;
+            border-radius: 24px;
+            border: 1px dashed var(--primary);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 16px;
+        }
+
+        .privacy-banner h2 {
+            font-size: 24px;
+            font-weight: 800;
+        }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 40px 20px;
+            text-align: center;
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-top: 80px;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            margin-bottom: 16px;
+        }
+
+        .footer-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary);
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 36px; }
+            .hero p { font-size: 16px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <div class="logo-icon">
+                <!-- Custom Heartbeat Icon -->
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+                    <path d="M5 11h3l1.5 1.5 1.5-4.5 1.5 6 1.5-3 1 1.5h4" stroke-width="2"/>
+                </svg>
+            </div>
+            <div class="logo-text">Fit<span>Pulse</span></div>
+        </div>
+        <a href="https://play.google.com/store/apps/details?id=com.fitpulse" class="cta-btn">Download Now</a>
+    </header>
+
+    <section class="hero">
+        <span class="badge">100% OFFLINE-FIRST FITNESS</span>
+        <h1>Track BMI, Period & Sync<br>Your Athletic Workouts</h1>
+        <p>Take charge of your health metrics securely. FitPulse syncs custom fitness guidelines directly to active menstrual cycle phases, keeping 100% of your data private on-device.</p>
+        <a href="https://play.google.com/store/apps/details?id=com.fitpulse" class="cta-btn" style="padding: 14px 32px; font-size: 16px;">Get it on Google Play</a>
+    </section>
+
+    <section class="features">
+        <div class="feature-card">
+            <div class="feature-icon">🩸</div>
+            <h3>Period Tracker</h3>
+            <p>Predict menstrual phases, fertile windows, safe days, and ovulation times automatically using our interactive offline calendar.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">🏋️</div>
+            <h3>Sync Workout Engine</h3>
+            <p>Access customized gym routines. Toggle between "Bodyweight" and "With Equipment" modes on the fly to match your daily constraints.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">⚖️</div>
+            <h3>BMI Calculator & Log</h3>
+            <p>Enter weight and height metrics in either metric or imperial formats, see your category, and archive your progression history.</p>
+        </div>
+    </section>
+
+    <section class="privacy-banner">
+        <h2>🛡️ Zero Tracker Access & Absolute Privacy</h2>
+        <p style="max-width: 800px; color: var(--text-muted); font-size: 14px;">
+            Unlike traditional tracking platforms, FitPulse has no remote databases, cloud synchronization steps, or backend servers. All metrics remain on your own hardware using a private device SQLite container, ensuring complete personal confidentiality.
+        </p>
+    </section>
+
+    <footer>
+        <div class="footer-links">
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="terms-of-use.html">Terms of Use</a>
+            <a href="mailto:bettgybson1@gmail.com">Support Contact</a>
+        </div>
+        <p>&copy; 2026 FitPulse. All Rights Reserved. Not medical advice.</p>
+    </footer>
+
+</body>
+</html>
