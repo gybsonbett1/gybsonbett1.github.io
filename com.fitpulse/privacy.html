@@ -1,51 +1,67 @@
 # Privacy Policy for FitPulse
 
-**Effective Date:** July 6, 2026  
-**Last Updated:** July 6, 2026
+**Last Updated: July 6, 2026**
 
-At FitPulse ("we," "our," or "us"), we are committed to protecting your privacy. This Privacy Policy explains how we handle your information when you download, install, and use our mobile application, **FitPulse** (the "App"), on Android devices.
+FitPulse ("we", "our", or "us") is dedicated to protecting your data privacy and providing you with absolute control over your personal metrics. 
 
----
-
-### 1. 100% OFFLINE-FIRST & LOCAL DATA STORAGE
-FitPulse is designed to be an **offline-first application**. 
-- **No Remote Transmission:** All personal health, menstrual, fitness, and physical metrics—including your Body Mass Index (BMI), height, weight, historical log archives, and menstrual period start/end dates—are stored **100% locally** on your device's private SQLite storage (via Room database persistence).
-- **No Cloud Database:** We do not operate remote databases, servers, or cloud infrastructure to store or collect your personal data. Your metrics never leave your device.
-- **Immediate Data Erasure:** You can permanently purge all data locally at any time using the "Delete All My Data" tool in the App's Settings menu.
+Unlike traditional fitness applications, FitPulse operates on a **100% offline-first architecture**. All your personal health records, cycle tracking configurations, and metrics are stored strictly in your device's private database sandbox and never transmitted to external servers.
 
 ---
 
-### 2. INFORMATION WE COLLECT AND RECEIVE
+### 1. Zero Cloud Data Collection & User Profiles
 
-#### A. Personal Data
-Because the App operates offline, we do not require user registration, email logins, social account linkages, or name collection. We collect **zero** personally identifiable information (PII).
+We do not operate remote backend servers, cloud storage clusters, or user account systems. 
 
-#### B. Permissions Requested
-To deliver ads and handle standard Android utilities, the App requests:
-- **`android.permission.INTERNET`**: Required strictly to initialize and load Google AdMob advertisements and redirect users to the Google Play Store for rating or feedback.
+* **No Accounts Required:** You do not need to provide a name, email address, phone number, or login credentials to access 100% of the app's utilities.
+* **No Silent Tracking:** Your inputs (weights, heights, menstrual dates, cycle lengths, logged workouts) are never uploaded, shared, or compiled outside of your device.
 
 ---
 
-### 3. THIRD-PARTY UTILITIES & INTEGRATIONS
+### 2. Local Database Storage & Data Risks
 
-#### Google AdMob
-We incorporate Google AdMob to deliver visual ads in designated sections (Native and Interstitial layouts) to help support development.
-- **No Ads in Period Tracker:** To maintain strict contextual privacy, no advertisements of any kind are placed within the Period tracking dashboard.
-- **Targeting & Ad IDs:** Google AdMob may collect and use advertising identifiers (such as the Google Advertising ID or Android ID) according to Google's standard ad policies to provide customized recommendations and frequency capping.
-- Please review Google’s privacy practices here: [Google Partner Privacy Policy](https://policies.google.com/technologies/partner-sites).
+Your health inputs are persisted locally using an on-device secure **Room SQLite Database**. 
 
----
-
-### 4. CHILDREN'S PRIVACY (COPPA COMPLIANCE)
-FitPulse does not knowingly collect or target any personal data from children under the age of 13. Since all tracking calculations (BMI and period sync) happen completely offline on your own device, no children’s information is transmitted or held by us.
+* **Complete Sandbox Isolation:** Because your metrics reside inside your device's secure application sandbox, they cannot be crawled or read by other external apps.
+* **Your Backup Responsibility:** Because there is no cloud synchronization or remote backup, deleting the FitPulse application from your device will permanently erase all your historical logs, logs, and period predictions. We cannot recover deleted local logs.
 
 ---
 
-### 5. CHANGES TO THIS PRIVACY POLICY
-We may update our Privacy Policy from time to time. Since we have no contact information for you, updates will be reflected solely by revising the "Last Updated" date at the top of this page. Your continued use of the App constitutes your acceptance of the updated terms.
+### 3. Google AdMob Integration & Strict Policy Compliance
+
+To fund ongoing offline development, FitPulse integrates the Google AdMob SDK. AdMob may collect and process device identifiers, advertising IDs, or approximate location details to display compliant advertising.
+
+We operate AdMob ads with strict compliance guidelines:
+
+* **No Ads on Period Calendars:** To respect your privacy, the Period tracker calendar and prediction dashboard display **zero advertisements**.
+* **Transition Frequency Capping:** Full-screen interstitial transition ads are controlled by a mandatory **3-minute (180 seconds) cooldown interval** to prevent user disruption and accidental clicks.
+* **Opt-In Premium Access:** Access to premium elite training programs is initiated solely via user consent by watching an Opt-In Rewarded Video.
 
 ---
 
-### 6. CONTACT US
-If you have any questions or concerns regarding this Privacy Policy, please contact us:
-- **Email:** bettgybson1@gmail.com
+### 4. Minimal System Permissions
+
+FitPulse requests minimal system permissions:
+
+* **INTERNET Access:** Used strictly to retrieve AdMob ad inventories and trigger rating/sharing intents directly to the Google Play Store.
+
+---
+
+### 5. Instant Local Data Purging
+
+You have the absolute right to delete your personal data at any time. 
+
+* To erase all logged weights, heights, BMI history, menstrual dates, and workout schedules, navigate to **Settings ➔ "Delete All My Data"** inside the app. This action instantly and permanently wipes out your local SQLite database.
+
+---
+
+### 6. Changes to This Policy
+
+We may update this Privacy Policy periodically. We will reflect the latest revisions by updating the "Last Updated" date at the top of this document.
+
+---
+
+### Contact Developer Support
+
+For inquiries, support, or feedback, please contact developer support directly at:
+
+* **Email:** support@fitpulse.app
