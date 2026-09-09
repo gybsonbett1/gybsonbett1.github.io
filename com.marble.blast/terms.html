@@ -1,1 +1,361 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of Use - Marble Blast</title>
+  <meta name="description" content="Terms of Use for Marble Blast mobile application. Explaining agreement, fair play, licenses, virtual items, and liability." />
+  <style>
+    :root {
+      --bg-dark: #140d09;
+      --bg-card: #22160f;
+      --primary: #29abe2;
+      --primary-hover: #48bcf0;
+      --accent-orange: #e8703a;
+      --accent-gold: #f1b33b;
+      --text-main: #f5ede6;
+      --text-muted: #ad9b8d;
+      --border: rgba(41, 171, 226, 0.25);
+      --border-light: rgba(255, 255, 255, 0.08);
+      --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      font-family: var(--font-family);
+      line-height: 1.7;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Navigation */
+    header {
+      background: rgba(20, 13, 9, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-light);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--text-main);
+    }
+
+    .brand-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      background: radial-gradient(circle at 35% 35%, #ff955b, #e8703a 60%, #9e3d14);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(232, 112, 58, 0.4);
+      font-size: 20px;
+    }
+
+    .brand-title {
+      font-weight: 800;
+      font-size: 1.25rem;
+      letter-spacing: 0.5px;
+      background: linear-gradient(135deg, #fff, #f1b33b);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    nav a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: color 0.2s, background-color 0.2s;
+      padding: 6px 12px;
+      border-radius: 8px;
+    }
+
+    nav a:hover {
+      color: var(--text-main);
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    nav a.active {
+      color: #fff;
+      background: rgba(41, 171, 226, 0.18);
+      border: 1px solid var(--border);
+    }
+
+    /* Content Area */
+    main {
+      flex: 1;
+      max-width: 900px;
+      margin: 40px auto 60px;
+      padding: 0 24px;
+      width: 100%;
+    }
+
+    .doc-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-light);
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.35);
+    }
+
+    .doc-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 24px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .doc-badge-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      background: rgba(41, 171, 226, 0.15);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 26px;
+      color: var(--primary);
+    }
+
+    .doc-title-group h1 {
+      font-size: 2rem;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 4px;
+    }
+
+    .doc-updated {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .legal-section {
+      margin-bottom: 28px;
+    }
+
+    .legal-section h2 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+
+    .legal-section p {
+      color: var(--text-main);
+      font-size: 1rem;
+      line-height: 1.8;
+      white-space: pre-line;
+    }
+
+    .doc-nav-box {
+      margin-top: 36px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border-light);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .doc-nav-box a {
+      color: var(--accent-gold);
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .doc-nav-box a:hover {
+      text-decoration: underline;
+    }
+
+    /* Footer */
+    footer {
+      margin-top: auto;
+      background: #0d0805;
+      border-top: 1px solid var(--border-light);
+      padding: 32px 24px;
+    }
+
+    .footer-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      align-items: center;
+      text-align: center;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .footer-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover {
+      color: var(--accent-orange);
+    }
+
+    .footer-copy {
+      color: #716257;
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 768px) {
+      .doc-card {
+        padding: 24px;
+      }
+      .nav-container {
+        flex-direction: column;
+        gap: 16px;
+      }
+      .doc-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Navigation -->
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="brand">
+        <div class="brand-icon">🔴</div>
+        <span class="brand-title">Marble Blast</span>
+      </a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html" class="active">Terms of Use</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Document Container -->
+  <main>
+    <article class="doc-card">
+      <div class="doc-header">
+        <div class="doc-badge-icon">⚖️</div>
+        <div class="doc-title-group">
+          <h1>Terms of Use</h1>
+          <div class="doc-updated">Effective: September 2026</div>
+        </div>
+      </div>
+
+      <div class="legal-section">
+        <h2>1. Agreement to Terms</h2>
+        <p>By downloading, installing, accessing, or playing Marble Blast, you agree to be bound by these Terms of Use and our Privacy Policy. No account or sign-up is required to play. If you do not agree to these terms, please do not use or access the game.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2>2. Limited License</h2>
+        <p>We grant you a personal, non-exclusive, non-transferable, revocable, limited license to play and enjoy Marble Blast on your personal Android devices solely for your entertainment purposes, strictly in accordance with these Terms.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2>3. Fair Play &amp; Prohibited Activities</h2>
+        <p>You agree not to engage in any prohibited conduct, including:
+• Reverse engineering, decompiling, disassembling, or extracting source code or game assets.
+• Using automated bots, macros, memory editors, hacks, or cheat software to artificially inflate high scores, streaks, or badges.
+• Tampering with in-game rewarded ad verifications or bypassing game mechanics.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2>4. Virtual Scores, Badges &amp; Revives</h2>
+        <p>All in-game points, badges, streaks, marble skins, and revival/retrieve tokens represent virtual entertainment mechanics tied to your device only. They possess no monetary, cash, or real-world value and cannot be transferred, redeemed, or exchanged.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2>5. Intellectual Property Rights</h2>
+        <p>All title, ownership rights, and intellectual property in and to Marble Blast &mdash; including gameplay designs, block models, audio synthesis engines, UI themes, and logos &mdash; are owned exclusively by the developer and protected by applicable copyright and trademark laws.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2>6. Disclaimer of Warranties</h2>
+        <p>Marble Blast is provided on an 'AS IS' and 'AS AVAILABLE' basis without warranty of any kind, whether express or implied. We do not guarantee uninterrupted, error-free, or offline-continuous operation at all times.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2>7. Limitation of Liability</h2>
+        <p>To the maximum extent permitted under applicable law, the game developers shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your access to or inability to access the game.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2>8. Amendments &amp; Updates</h2>
+        <p>We reserve the right to revise or modify these Terms at any time to reflect game updates or regulatory requirements. Continued use of the game following updates constitutes acceptance of the modified Terms.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2>9. Contact &amp; Inquiries</h2>
+        <p>Questions about these Terms can be sent to kiplangatgybson1@gmail.com or by mail at 00100 Nairobi, Kenya.</p>
+      </div>
+
+      <div class="doc-nav-box">
+        <a href="index.html">&larr; Return to Home</a>
+        <a href="privacy.html">View Privacy Policy &rarr;</a>
+      </div>
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Use</a>
+        <a href="mailto:kiplangatgybson1@gmail.com">Contact Support</a>
+      </div>
+      <p class="footer-copy">&copy; 2026 Marble Blast. All rights reserved. Nairobi, Kenya.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
